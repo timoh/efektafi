@@ -1,0 +1,16 @@
+name: Efekta – Disruptive Growth from Customer Development
+markdown: redcarpet
+pygments: true
+permalink: pretty
+
+navigation:
+- text: Growth Marketing
+  url: /#growthmktg
+- text: Lean Innovation
+  url: /#innovation
+- text: Customer Development
+  url: /#custdev
+- text: Who We Are
+  url: /#us
+- text: Contact Us
+  url: /#contact

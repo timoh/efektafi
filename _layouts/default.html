@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{{ page.title }} | Efekta – Disruptive Growth from Customer Development</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link href="css/mat-style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div class="navbar-fixed">
+  <nav class="grey-text white" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/#top" class="brand-logo"><img src="../images/efekta.png" /></a>
+
+      <!-- Menu for desktop  -->
+      <ul class="right hide-on-med-and-down">
+        {% for link in site.navigation %}
+          {% assign current = nil %}
+          {% if page.url == link.url or page.layout == link.layout %}
+            {% assign current = 'active' %}
+          {% endif %}
+
+          <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+            <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Menu for mobile (side drawer)  -->
+      <ul id="nav-mobile" class="side-nav">
+        <li class="">
+          <a class="" href="/#top">Home</a>
+        </li>
+        {% for link in site.navigation %}
+          {% assign current = nil %}
+          {% if page.url == link.url or page.layout == link.layout %}
+            {% assign current = 'active' %}
+          {% endif %}
+
+          <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+            <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Menu icon for mobile  -->
+      <a href="/" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+  {{content}}
+
+  <footer id="contact" class="page-footer red lighten-1">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col l4 s12">
+          <h5 class="white-text light">Contact <b>Efekta</b> </h5>
+
+          <p class="grey-text text-lighten-4 light">
+            <b>Phone</b>: <a class="blue-text text-lighten-3"  href="tel:+358406741915">+358 40 674 1915</a> <br>
+            <b>Email</b>: <a class="blue-text text-lighten-3" href="mailto:yritys@efekta.fi">yritys@efekta.fi</a> <br>
+            <b>Twitter</b>: <a class="blue-text text-lighten-3" href="https://twitter.com/therttua">@therttua</a>
+
+          </p>
+        </div>
+
+        <div class="col l4 s12">
+          <h5 class="white-text light">Invoicing </h5>
+
+          <p class="grey-text text-lighten-4 light">
+            <b>Company code</b>: FI 1967458-2
+          </p>
+
+          <p class="white-text text-lighten-2 light">
+            <b>Invoice format</b>: E-invoice <br>
+            <b>Operator</b>: Sampo Pankki Oyj (DABAFIHH) <br>
+            <b>E-invoice address</b>: FI8280001871076908 <br>
+            <b>OVT code</b>: 003719674582
+          </p>
+        </div>
+
+        <div class="col l4 s12">
+          <h5 class="white-text light">Site powered by</h5>
+          <p class="white-text light">
+            <a class="blue-text text-lighten-3" href="http://jekyllrb.com/">Jekyll</a> <br>
+            <a class="blue-text text-lighten-3" href="http://materializecss.com/getting-started.html">Materialize</a> <br>
+            Image credits CC BY-SA 4.0 <a class="blue-text text-lighten-3" href="https://www.flickr.com/photos/herttua/">Herttua</a>, <a class="blue-text text-lighten-3" href="https://www.flickr.com/photos/cowork-klitmoller/">Cowork Klitmøller</a> and <a class="blue-text text-lighten-3" href="https://www.flickr.com/photos/balancedteam/">Balanced Team
+</a>
+
+          </p>
+
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      &copy; Copyright 2015 Efekta Inc.
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <script src="./js/init.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22466955-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  </body>
+</html>
